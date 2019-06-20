@@ -2,16 +2,25 @@ package Paquetes;
 
 public class SecuenciaParentesis {
 
-    private int largoSecuencia;
-    private String secuencia;
-    private char[] arraySecuencia;
+    private final int largoSecuencia;
+    private final String secuencia;
+    private final char[] arraySecuencia;
 
+    /**
+     *
+     * @param largoSecuencia
+     * @param secuencia contiene solo caracteres de la forma "(" , ")" y "?"
+     */
     public SecuenciaParentesis(int largoSecuencia, String secuencia) {
         this.largoSecuencia = largoSecuencia;
         this.secuencia = secuencia;
         this.arraySecuencia = secuencia.toCharArray();
     }
 
+    /**
+     *
+     * @return un String que muestra el resultado con la secuencia correcta de paréntesis, dada la secuencia original inicialmente
+     */
     public String resolverSecuenciaParentesis() {
         if (this.largoSecuencia % 2 != 0) {
             return ":(";
